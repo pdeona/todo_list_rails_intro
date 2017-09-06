@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @todo_item.description %>
+  <br>
+  <strong>Due By:</strong>
+  <%= @todo_item.due_by %>
+</p>
+
+<%= link_to 'Edit', edit_todo_item_path(@todo_item) %> |
+<%= link_to 'Back', todo_items_path %>
+<br><br>
+
+<thead>
+  <strong>Other Items Due on <%= @todo_item.due_by %></strong><br>
+</thead>
+
+<tbody>
+  <% @todo_items = TodoItem.all %>
+  <% @todo_items.each do |todo_item| %>
+    <% if todo_item.due_by == @todo_item.due_by && todo_item != @todo_item %>
+      <tr>
+        <td><%= link_to todo_item.description, todo_item %></td>
+        <td><%= todo_item.due_by %></td>
+        <br>
+      </tr>
+    <% end %>
+
+  <% end %>
+</tbody>
