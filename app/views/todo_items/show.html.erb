@@ -17,7 +17,6 @@
 </thead>
 
 <tbody>
-  <% @todo_items = TodoItem.all %>
   <% @todo_items.each do |todo_item| %>
     <% if todo_item.due_by == @todo_item.due_by && todo_item != @todo_item %>
       <tr>
