@@ -1,24 +1,10 @@
-# README
+### TODO: List using Ruby on Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##### This todo list has the following tweaks:
+* Due Dates
+* Sortable columns in index
+* Tasks show other tasks with a shared due date
+* Clicking the task description takes you to the todo_item#show page
+* Minor CSS Styling
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Run by cloning into a dir of your making, cd into it and run rails s then visit localhost:3000/todo_items to start becoming productive again!
